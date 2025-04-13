@@ -1,8 +1,17 @@
+@font-face {
+    font-family: 'Manege Demo';
+    src: url('./ManegeDemo-Light.ttf');
+}
+
 * {
     margin:0;
     padding:0;
     border:0;
+    font-family: 'Manege Demo';
 }
+
+
+
 
 header{
     width:100vw;
@@ -18,4 +27,43 @@ header{
     z-index:-1;
     background-position:center;
     background-size:cover;
+}
+.card {
+    border-width: 3px;
+    border-color:rgb(175, 14, 14);
+    border-style:solid;
+    color:rgb(255, 255, 255);
+    
+    font-size:20px;
+    
+    border-radius: 5px;
+   
+    height: 10rem;
+    width: 18vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background-position:center;
+    background-size:cover;
+   
+}
+
+
+
+.card_container {
+    margin-top:3%;
+    align-items: center;
+    width:100%;
+    height:max-content;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    padding-top: 1vw;
+}
+
+.about{
+    margin-top:3%;
 }
