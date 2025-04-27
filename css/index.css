@@ -91,3 +91,31 @@ footer{
     justify-content:space-evenly;
     color:aliceblue;
 }
+
+.layers-container{
+    width:100wh;
+    transform-style:preserve-3d;
+    will-change:transform;
+}
+
+.layers-item {
+    position:absolute;
+    background-size:cover;
+    background-position:center;
+
+}
+
+.background{
+    transform: translate(-50px) scale(1.1)
+}
+
+.head-text{
+    transform:translateZ(80px) scale(0.8);
+}
+
+.hero {
+    perspective:1000px;
+    overflow:hidden;
+   
+
+}
