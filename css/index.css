@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Manege Demo';
     src: url('./ManegeDemo-Light.ttf');
@@ -56,7 +57,51 @@ header{
    
 }
 
+.gallery-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
+    height:80vw;
+    width:100vw;
+}
+
+.gallery{
+    display:flex;
+    flex-direction:row;
+    height:80vh;
+    gap:10px;
+    min-width:calc(var(--total-items)*250px)
+
+}
+
+.gallery-item.active {
+    flex-grow:var(--total-items);
+    height:100%;
+    
+}
+
+.gallery-item:not(.active):hover {
+    transform:translateY(-7px);
+    cursor:pointer;
+    box-shadow: -5px 16px 31px 6px rgba(66, 68, 90, 1);
+
+}
+
+.gallery-item{
+    flex-grow:1;
+    height:100%;
+    
+    border-radius:32px;
+
+    background-size:cover;
+    background-position:center;
+
+    transition:
+        flex-grow 750ms ease-out,
+        box-shadow 200ms,
+        transform 200ms;
+}
 
 .card_container {
     margin-top:3%;
@@ -92,10 +137,18 @@ footer{
     color:aliceblue;
 }
 
+.layers {
+    overflow: hidden;
+}
+
 .layers-container{
+    
+    color:rgb(224, 30, 30);
+    text-shadow: 2px 2px 5px rgb(119, 18, 18);
     width:100wh;
     transform-style:preserve-3d;
     will-change:transform;
+    font-size:3em;
 }
 
 .layers-item {
@@ -111,6 +164,25 @@ footer{
 
 .head-text{
     transform:translateZ(80px) scale(0.8);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.background-layer {
+    transform:translateZ(-80px) scale(1.2);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+
+
+    background-position:center;
+    background-size:cover;
 }
 
 .hero {

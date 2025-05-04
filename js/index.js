@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
 
-const sensitivity = 0.4
+const sensitivity = 0.1
 
 document.addEventListener("mousemove", (e) => {
     let deltaX = (e.clientX - window.innerWidth / 2 ) * sensitivity
@@ -8,21 +8,19 @@ document.addEventListener("mousemove", (e) => {
 
     gsap.to(".layers-container", {
 
-        diration: 1.5,
-        x: deltaX,
-        y: deltaY,
-        rotationX: y / 10,
-        rotationY: X / 10,
+        duration: 1.5,
+        x: -deltaX,
+        y: -deltaY,
+        rotationX: deltaY / 10,
+        rotationY: deltaX / 10,
         ease: "power2.out"
 
     })
 
     gsap.to(".head-text", {
-
-        diration: 1.5,
-        x: -deltaX / 2,
-        y: -deltaY / 2,
-      
+        duration: 1.5,
+        x: deltaX / 2,
+        y: deltaY / 2,
         ease: "power2.out"
 
     })
@@ -50,3 +48,23 @@ gsap.utils.toArray("section").forEach(section => {
     )
 })
 
+function initGallery(){
+    let gallery = document.querySelector(".gallery")
+    let items = document.querySelectorAll(".gallery-item")
+
+    gallery.style.setProperty("--total-items",items.length)
+    console.log(items.length)
+
+    gallery.addEventListener("click", (event) => {
+        let clicked = event.target.closest(".gallery-item")
+        if (!clicked || clicked.classList.contains("active")) return
+
+        items.forEach((item) => {
+            item.classList.remove("active")
+        })
+        clicked.classList.add("active")
+
+    })
+}
+
+document.addEventListener("DOMContentLoaded",initGallery)
