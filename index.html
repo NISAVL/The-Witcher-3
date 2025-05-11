@@ -5,6 +5,12 @@
 
 
 <head>
+
+    
+      
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +21,11 @@
     <script src="./libs/gsap/ScrollTrigger.min.js"></script>
 </head>
 
-<body style="background-color:rgb(170, 181, 199)">
+<body class="sky">
+    <div class = "theme-change">
+        <i class = "fas fa-sun"></i>
+    </div>
+
     <div class="wrapper">
         <div class="wrapper_content">
             <header class="hero">
@@ -40,7 +50,7 @@
                 <section class="about">
                     <div
                         style="font-family: 'Manege Demo', 'Times New Roman', 'Cochin, Cambria', 'Times, Georgia', 'serif'">
-                        <h1 style="color:rgb(0, 0, 0)">The Witcher 3: Wild Hunt – это ролевая игра с открытым миром,
+                        <h1 class = "main-text">The Witcher 3: Wild Hunt – это ролевая игра с открытым миром,
                             разработанная
                             польской студией CD Projekt Red и выпущенная в 2015 году. Действие происходит в фэнтезийной
                             вселенной, основанной на книгах Анджея Сапковского. Игрок принимает роль Геральта из Ривии –
@@ -59,17 +69,17 @@
                     </div>
                     <div class = "gallery-wrapper">
                         <div class = "gallery">
-                            <div style = "background-image:url(images/wood.jpg)" class="gallery-item active"></div>
-                            <div style = "background-image:url(images/wood.jpg)" class="gallery-item"></div>
-                            <div style = "background-image:url(images/wood.jpg)" class="gallery-item"></div>
-                            <div style = "background-image:url(images/wood.jpg)" class="gallery-item"></div>
-                            <div style = "background-image:url(images/wood.jpg)" class="gallery-item"></div>
+                            <div style = "background-image:url(images/i1.png)" class="gallery-item active"></div>
+                            <div style = "background-image:url(images/i2.jpg)" class="gallery-item"></div>
+                            <div style = "background-image:url(images/i3.jpg)" class="gallery-item"></div>
+                            <div style = "background-image:url(images/i4.jpg)" class="gallery-item"></div>
+                            <div style = "background-image:url(images/52.jpg)" class="gallery-item"></div>
                             
                         </div>
                     </div>
                 </section>
                 <section class="comments">
-                    <h1 style="text-align:center;font-size:4em;margin-top:10px">Отзывы игроков</h1>
+                    <h1 style="text-align:center;font-size:4em;margin-top:10px" class = "main-text">Отзывы игроков</h1>
                     <div class="card_container">
                         <div class="card" style="background: url(images/wood_g.jpg)">
                             <h1>Очень круто, богатый, детализированный мир с живыми NPC и атмосферными локациями.</h1>
@@ -91,7 +101,7 @@
                     </div>
                 </section>
                 <section class="features">
-                    <h1 style="text-align:center;font-size:4em">Особенности игры</h1>
+                    <h1 style="text-align:center;font-size:4em" class = "main-text">Особенности игры</h1>
                     <ul class="features_card_container">
                         <li class="features-card" style="background: url(images/wood_g.jpg);">
                             <h1>

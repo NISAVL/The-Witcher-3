@@ -1,3 +1,11 @@
+:root {
+    --primary:  rgb(255, 11, 11); /*rgb(146, 0, 0, 0.836);*/
+    --secondary: rgb(170, 181, 199); /*rgb(34, 40, 51);*/   
+    --primary_2: rgb(122, 10, 10); /*rgb(206, 206, 206);*/  
+    --text: rgb(10, 10, 10); /*rgb(255, 255, 255);*/  
+    --text2: rgb(255, 255, 255, 0.829); /*rgb(10, 10, 10); */ 
+}
+
 
 @font-face {
     font-family: 'Manege Demo';
@@ -9,9 +17,16 @@
     padding:0;
     border:0;
     font-family: 'Manege Demo';
+    transition: color 200ms ease, background-color 200ms ease;
 }
 
+.sky{
+    background-color:var(--secondary);
+}
 
+.main-text{
+    color:var(--text);
+}
 
 
 header{
@@ -34,9 +49,41 @@ header{
     margin: 200px 60px;
 
 }
+
+.theme-change {
+    width: 5vw;
+    height:5vw;
+    font-size:3em;
+    color:antiquewhite;
+    background-color: rgb(105, 105, 96) ;
+    border: 2px solid rgb(211, 218, 205);
+    border-radius: 2.5px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index:1000;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    transition:
+        background-color 200ms ease,
+        transform 50ms ease;
+
+}
+
+.theme-change:hover{
+    background-color: rgb(211, 218, 205);
+}
+
+theme-change:active{
+    transform: translateY(2px);
+}
+
 .card, .features-card {
     border-width: 3px;
-    border-color:rgb(255, 11, 11);
+    border-color:var(--primary);
     border-style:solid;
     color:rgb(255, 255, 255);
     
@@ -71,7 +118,7 @@ header{
     flex-direction:row;
     height:80vh;
     gap:10px;
-    min-width:calc(var(--total-items)*250px)
+    min-width:calc(var(--total-items)*330px)
 
 }
 
@@ -143,8 +190,8 @@ footer{
 
 .layers-container{
     
-    color:rgb(224, 30, 30);
-    text-shadow: 2px 2px 5px rgb(119, 18, 18);
+    color:var(--primary);
+    text-shadow: 2px 2px 5px var(--primary_2);
     width:100wh;
     transform-style:preserve-3d;
     will-change:transform;
@@ -191,3 +238,4 @@ footer{
    
 
 }
+

@@ -67,4 +67,37 @@ function initGallery(){
     })
 }
 
+colors = {
+    "primary": "rgb(255, 11, 11)",
+    "secondary": "rgb(170, 181, 199)",
+    "thirty": "rgb(34, 40, 51)",
+    "primary_2": "rgb(122, 10, 10)"
+}
+
 document.addEventListener("DOMContentLoaded",initGallery)
+
+const themeChanger = document.querySelector(".theme-change")
+themeChanger.addEventListener("click", () => {
+    let isLight = localStorage.getItem("theme") == "light"
+
+    if (isLight){ 
+        localStorage.setItem("theme","dark")
+        themeChanger.innerHTML = '<i class = "fas fa-moon"></i>'
+        document.documentElement.style.setProperty("--secondary","rgb(34, 40, 51)")
+        document.documentElement.style.setProperty("--text","rgb(255, 255, 255)")
+
+        document.documentElement.style.setProperty("--primary","rgb(146, 0, 0, 0.836)")
+        document.documentElement.style.setProperty("--primary_2","rgb(206, 206, 206)")
+        
+      
+    }
+    else{ 
+        localStorage.setItem("theme","light")
+        themeChanger.innerHTML = '<i class = "fas fa-sun"></i>' 
+        document.documentElement.style.setProperty("--secondary","rgb(170, 181, 199)")
+        document.documentElement.style.setProperty("--text","rgb(10, 10, 10)")
+
+        document.documentElement.style.setProperty("--primary","rgb(255, 11, 11)")
+        document.documentElement.style.setProperty("--primary_2","rgb(122, 10, 10)")
+    }
+})
