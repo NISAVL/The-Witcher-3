@@ -98,6 +98,34 @@ themeChanger.addEventListener("click", () => {
         document.documentElement.style.setProperty("--text","rgb(10, 10, 10)")
 
         document.documentElement.style.setProperty("--primary","rgb(255, 11, 11)")
-        document.documentElement.style.setProperty("--primary_2","rgb(122, 10, 10)")
+        document.documentElement.style.setProperty("--primary_2","rgb(180, 10, 10)")
     }
 })
+
+function initPlayer(){
+    const btn = document.querySelector(".play-btn");
+    const audio = document.getElementById('audioPlayer');
+
+    btn.addEventListener("click",() => {
+        if (audio.paused){
+            audio.play()
+            btn.innerHTML = '<class="fas fa-pause"></i>';
+        }
+        else{
+            audio.pause();
+            btn.innerHTML = '<class="fas fa-play"></i>';
+        }
+    });
+
+    const time = document.querySelector(".time");
+    audio.addEventListener("timeupdate", () => {
+        let minutes = Math.floor(audio.currentTime / 60);
+        let seconds = Math.floor(audio.currentTime % 60).ToString().padStart(2,"0");
+        let maxMinutes = Math.floor(aidio.duration / 60);
+        let maxSeconds = Math.floor(aidio.duration % 60).ToString().padStart(2,"0");
+        time.innerHTML = `${minutes}:${seconds} / ${maxMinutes}:${maxSeconds}`;
+    })
+
+}
+
+document.addEventListenter("DomContentLoaded", initPlayer);
