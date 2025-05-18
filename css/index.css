@@ -113,6 +113,30 @@ theme-change:active{
     width:100vw;
 }
 
+.progress_bar{
+    width:80%;
+    height:20px;
+    background-color:var(--primary);
+}
+
+.music-cover{
+    height:40vh;
+    width:40vh;
+    border-style:inherit;
+    border-width:4px;
+    border-color:aliceblue;
+    
+    border-radius:50%;
+
+    background: url("../images/cover.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    
+}
+
 .gallery{
     display:flex;
     flex-direction:row;
@@ -186,6 +210,34 @@ footer{
 
 .layers {
     overflow: hidden;
+}
+
+.music_player_wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.music_player {
+    display:flex;
+    height:60vh;
+    width:70vw;
+    background-color:rgb(32, 32, 32);
+    border-radius:30px;
+    border-style:double;
+    border-color:rgb(255, 255, 255);
+    border-width:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 30vw;
+    height: 20vh;
 }
 
 .layers-container{
