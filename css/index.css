@@ -116,7 +116,15 @@ theme-change:active{
 .progress_bar{
     width:80%;
     height:20px;
+    background-color:var(--primary_2);
+    
+}
+
+.progress {
+    width:0%;
+    height:100%;
     background-color:var(--primary);
+
 }
 
 .music-cover{
@@ -238,6 +246,12 @@ footer{
     flex-direction: column;
     width: 30vw;
     height: 20vh;
+}
+
+.play-btn {
+    margin: 10px;
+    font-size:2em;
+
 }
 
 .layers-container{
